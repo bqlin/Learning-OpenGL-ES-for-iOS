@@ -86,6 +86,7 @@ static const SceneVertex vertices[] = {
 }
 
 - (void)dealloc {
+	glDeleteBuffers(1, &_vertexBufferID);
 	NSLog(@"%s", __FUNCTION__);
 }
 
