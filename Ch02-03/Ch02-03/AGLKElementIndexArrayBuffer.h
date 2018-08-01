@@ -13,8 +13,8 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
     AGLKVertexAttribPosition = GLKVertexAttribPosition,
     AGLKVertexAttribNormal = GLKVertexAttribNormal,
     AGLKVertexAttribColor = GLKVertexAttribColor,
-    AGLKVertexAttribTexCoord0 = GLKVertexAttribTexCoord0;
-    AGLKVertexAttribTexCoord1 = GLKVertexAttribTexCoord1;
+    AGLKVertexAttribTexCoord0 = GLKVertexAttribTexCoord0,
+    AGLKVertexAttribTexCoord1 = GLKVertexAttribTexCoord1,
 };
 
 @interface AGLKElementIndexArrayBuffer : NSObject

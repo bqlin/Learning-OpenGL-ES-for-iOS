@@ -71,7 +71,7 @@
     if (shouldEnable) glEnableVertexAttribArray(index);
     
     // 5. 设置指针
-    glVertexAttribPointer(index, count, GL_FLOAT, GL_FALSE, _stride, NULL + offset);
+    glVertexAttribPointer(index, count, GL_FLOAT, GL_FALSE, (GLsizei)_stride, NULL + offset);
     
 #ifdef DEBUG
     // report any errrors
