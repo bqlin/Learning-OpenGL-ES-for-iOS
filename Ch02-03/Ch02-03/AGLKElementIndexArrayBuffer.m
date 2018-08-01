@@ -94,6 +94,16 @@
 }
 
 /////////////////////////////////////////////////////////////////
+// Submits the drawing command identified by mode and instructs
+// OpenGL ES to use count vertices from previously prepared
+// buffers starting from the vertex at index first in the
+// prepared buffers
++ (void)drawPreparedArraysWithMode:(GLenum)mode startVertexIndex:(GLint)first numberOfVertices:(GLsizei)count {
+    // 6. 绘制
+    glDrawArrays(mode, first, count);
+}
+
+/////////////////////////////////////////////////////////////////
 // This method deletes the receiver's buffer from the current
 // Context when the receiver is deallocated.
 - (void)dealloc {

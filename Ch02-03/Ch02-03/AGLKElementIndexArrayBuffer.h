@@ -19,18 +19,66 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
 
 @interface AGLKElementIndexArrayBuffer : NSObject
 
+/// 缓存标识符
 @property (nonatomic, assign, readonly) GLuint name;
+
+/// 缓存字节数
 @property (nonatomic, assign, readonly) GLsizeiptr bufferSizeBytes;
+
+/// 步幅
 @property (nonatomic, assign, readonly) GLsizeiptr stride;
 
+/**
+ 绘制
+ 内部调用 `glDrawArrays(mode, first, count)`
+ 
+ @param mode 处理模式
+ @param first 缓存中第一顶点的位置
+ @param count 顶点数量
+ */
 + (void)drawPreparedArraysWithMode:(GLenum)mode startVertexIndex:(GLint)first numberOfVertices:(GLsizei)count;
 
+/**
+ 初始化
+
+ @param stride 步幅
+ @param count 顶点数量
+ @param dataPtr 顶点数组指针
+ @param usage 用途
+ @return AGLKElementIndexArrayBuffer 实例
+ */
 - (instancetype)initWithAttribStride:(GLsizeiptr)stride numberOfVertices:(GLsizei)count bytes:(const GLvoid *)dataPtr usage:(GLenum)usage;
 
+/**
+ 重新加载存储在接收者的数据
+ 用途使用 `GL_DYNAMIC_DRAW`
+
+ @param stride 步幅
+ @param count 顶点数量
+ @param dataPtr 顶点数组指针
+ */
+- (void)reinitWithAttribStride:(GLsizeiptr)stride numberOfVertices:(GLsizei)count  bytes:(const GLvoid *)dataPtr;
+
+/**
+ 准备顶点数组到缓冲区
+
+ @param index 准备的顶点索引
+ @param count 顶点总数
+ @param offset 位移
+ @param shouldEnable 是否启用
+ */
 - (void)prepareToDrawWithAttrib:(GLuint)index numberOfCoordinates:(GLint)count attribOffset:(GLsizeiptr)offset shouldEnable:(BOOL)shouldEnable;
 
+/**
+ 绘制
+ 内部调用 `glDrawArrays(mode, first, count)`
+ 
+ @param mode 处理模式
+ @param first 缓存中第一顶点的位置
+ @param count 顶点数量
+ */
 - (void)drawArrayWithMode:(GLenum)mode startVertexIndex:(GLint)first numberOfVertices:(GLsizei)count;
 
-- (void)reinitWithAttribStride:(GLsizeiptr)stride numberOfVertices:(GLsizei)count  bytes:(const GLvoid *)dataPtr;
+
 
 @end
