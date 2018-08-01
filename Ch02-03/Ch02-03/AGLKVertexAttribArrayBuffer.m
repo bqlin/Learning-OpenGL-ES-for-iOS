@@ -1,14 +1,14 @@
 //
-//  AGLKElementIndexArrayBuffer.m
+//  AGLKVertexAttribArrayBuffer.m
 //  Ch02-03
 //
 //  Created by bqlin on 2018/7/31.
 //  Copyright © 2018年 Bq. All rights reserved.
 //
 
-#import "AGLKElementIndexArrayBuffer.h"
+#import "AGLKVertexAttribArrayBuffer.h"
 
-@implementation AGLKElementIndexArrayBuffer
+@implementation AGLKVertexAttribArrayBuffer
 
 /////////////////////////////////////////////////////////////////
 // This method creates a vertex attribute array buffer in

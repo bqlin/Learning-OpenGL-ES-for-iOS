@@ -1,5 +1,5 @@
 //
-//  AGLKElementIndexArrayBuffer.h
+//  AGLKVertexAttribArrayBuffer.h
 //  Ch02-03
 //
 //  Created by bqlin on 2018/7/31.
@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
     AGLKVertexAttribTexCoord1 = GLKVertexAttribTexCoord1,
 };
 
-@interface AGLKElementIndexArrayBuffer : NSObject
+@interface AGLKVertexAttribArrayBuffer : NSObject
 
 /// 缓存标识符
 @property (nonatomic, assign, readonly) GLuint name;
@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
  @param count 顶点数量
  @param dataPtr 顶点数组指针
  @param usage 用途
- @return AGLKElementIndexArrayBuffer 实例
+ @return AGLKVertexAttribArrayBuffer 实例
  */
 - (instancetype)initWithAttribStride:(GLsizeiptr)stride numberOfVertices:(GLsizei)count bytes:(const GLvoid *)dataPtr usage:(GLenum)usage;
 
