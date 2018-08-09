@@ -16,7 +16,7 @@ typedef struct{
     GLKVector2 textureCoords;
 } SceneVertex;
 
-/// 定义示例三角形顶点数据
+/// 定义示例三角形顶点数据，包含了纹理坐标和位置坐标
 static const SceneVertex vertices[] = {
     {{-.5, -.5, .0}, {.0, .0}},	// 左下角
     {{.5, -.5, .0}, {1.0, .0}},	// 右下角
@@ -65,6 +65,8 @@ static const SceneVertex vertices[] = {
 	// 配置纹理
 	CGImageRef imageRef = [UIImage imageNamed:@"leaves.gif"].CGImage;
 	
+	// GLKTextureLoader 会自动调用 glTexParmeteri() 方法为创建的纹理缓存设置 OpenGL ES 取样和循环模式
+	// GLKTextureInfo 类封装了纹理缓存的祥光信息，包括其尺寸及它是否包含 MIP 贴图。
 	GLKTextureInfo *textureInfo = [GLKTextureLoader textureWithCGImage:imageRef options:nil error:NULL];
 	
 	_baseEffect.texture2d0.name = textureInfo.name;
