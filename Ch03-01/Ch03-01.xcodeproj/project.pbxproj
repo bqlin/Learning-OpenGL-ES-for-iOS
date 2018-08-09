@@ -14,6 +14,8 @@
 		FB76497720FD80DD00A6DFA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB76497620FD80DD00A6DFA2 /* Assets.xcassets */; };
 		FB76497A20FD80DD00A6DFA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB76497820FD80DD00A6DFA2 /* LaunchScreen.storyboard */; };
 		FB76497D20FD80DD00A6DFA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB76497C20FD80DD00A6DFA2 /* main.m */; };
+		FBE1BFB3211BE8A400AA72D7 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBE1BFB2211BE8A300AA72D7 /* earth.jpg */; };
+		FBE1BFB7211BEBFD00AA72D7 /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = FBE1BFB6211BEBFC00AA72D7 /* leaves.gif */; };
 		FBE3CF5320FECAD500A10CBC /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE3CF5220FECAD500A10CBC /* AGLKContext.m */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		FB76497920FD80DD00A6DFA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB76497B20FD80DD00A6DFA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB76497C20FD80DD00A6DFA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBE1BFB2211BE8A300AA72D7 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
+		FBE1BFB6211BEBFC00AA72D7 /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leaves.gif; sourceTree = "<group>"; };
 		FBE3CF5120FECAD500A10CBC /* AGLKContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKContext.h; sourceTree = "<group>"; };
 		FBE3CF5220FECAD500A10CBC /* AGLKContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +82,8 @@
 				FB76497820FD80DD00A6DFA2 /* LaunchScreen.storyboard */,
 				FB76497B20FD80DD00A6DFA2 /* Info.plist */,
 				FB76497C20FD80DD00A6DFA2 /* main.m */,
+				FBE1BFB2211BE8A300AA72D7 /* earth.jpg */,
+				FBE1BFB6211BEBFC00AA72D7 /* leaves.gif */,
 			);
 			path = "Ch03-01";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE1BFB3211BE8A400AA72D7 /* earth.jpg in Resources */,
+				FBE1BFB7211BEBFD00AA72D7 /* leaves.gif in Resources */,
 				FB76497A20FD80DD00A6DFA2 /* LaunchScreen.storyboard in Resources */,
 				FB76497720FD80DD00A6DFA2 /* Assets.xcassets in Resources */,
 				FB76497520FD80DB00A6DFA2 /* Main.storyboard in Resources */,
