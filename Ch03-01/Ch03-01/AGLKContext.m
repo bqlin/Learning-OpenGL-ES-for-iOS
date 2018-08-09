@@ -20,6 +20,8 @@
 	glClearColor(clearColor.r, clearColor.g, clearColor.b, clearColor.a);
 }
 
+#pragma mark - public
+
 - (void)clear:(GLbitfield)mask {
 	NSAssert(self == [self.class currentContext], @"receiving context required to be current context");
 	
