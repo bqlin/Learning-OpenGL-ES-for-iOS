@@ -13,6 +13,7 @@
 		FBE1BFCE211BF3AC00AA72D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE1BFCD211BF3AC00AA72D7 /* Assets.xcassets */; };
 		FBE1BFD1211BF3AC00AA72D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE1BFCF211BF3AC00AA72D7 /* LaunchScreen.storyboard */; };
 		FBE1BFD4211BF3AC00AA72D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE1BFD3211BF3AC00AA72D7 /* main.m */; };
+		FBE1BFDF211BF4BC00AA72D7 /* AGLKTextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE1BFDE211BF4BC00AA72D7 /* AGLKTextureLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		FBE1BFD0211BF3AC00AA72D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBE1BFD2211BF3AC00AA72D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBE1BFD3211BF3AC00AA72D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBE1BFDD211BF4BC00AA72D7 /* AGLKTextureLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKTextureLoader.h; sourceTree = "<group>"; };
+		FBE1BFDE211BF4BC00AA72D7 /* AGLKTextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				FBE1BFCF211BF3AC00AA72D7 /* LaunchScreen.storyboard */,
 				FBE1BFD2211BF3AC00AA72D7 /* Info.plist */,
 				FBE1BFD3211BF3AC00AA72D7 /* main.m */,
+				FBE1BFDD211BF4BC00AA72D7 /* AGLKTextureLoader.h */,
+				FBE1BFDE211BF4BC00AA72D7 /* AGLKTextureLoader.m */,
 			);
 			path = "Ch03-02";
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE1BFDF211BF4BC00AA72D7 /* AGLKTextureLoader.m in Sources */,
 				FBE1BFC9211BF3AB00AA72D7 /* ViewController.m in Sources */,
 				FBE1BFD4211BF3AC00AA72D7 /* main.m in Sources */,
 				FBE1BFC6211BF3AB00AA72D7 /* AppDelegate.m in Sources */,
