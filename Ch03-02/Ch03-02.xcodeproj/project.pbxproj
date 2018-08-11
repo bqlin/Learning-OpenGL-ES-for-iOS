@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB85983A211DA0A70019AD2E /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FB859835211DA0A60019AD2E /* AGLKContext.m */; };
+		FB85983B211DA0A70019AD2E /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB859836211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.m */; };
+		FB85983C211DA0A70019AD2E /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB859838211DA0A70019AD2E /* leaves.gif */; };
 		FBE1BFC6211BF3AB00AA72D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE1BFC5211BF3AB00AA72D7 /* AppDelegate.m */; };
 		FBE1BFC9211BF3AB00AA72D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE1BFC8211BF3AB00AA72D7 /* ViewController.m */; };
 		FBE1BFCC211BF3AB00AA72D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE1BFCA211BF3AB00AA72D7 /* Main.storyboard */; };
@@ -17,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB859835211DA0A60019AD2E /* AGLKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKContext.m; sourceTree = "<group>"; };
+		FB859836211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
+		FB859837211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
+		FB859838211DA0A70019AD2E /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leaves.gif; sourceTree = "<group>"; };
+		FB859839211DA0A70019AD2E /* AGLKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKContext.h; sourceTree = "<group>"; };
 		FBE1BFC1211BF3AB00AA72D7 /* Ch03-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ch03-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE1BFC4211BF3AB00AA72D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FBE1BFC5211BF3AB00AA72D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +80,11 @@
 				FBE1BFD3211BF3AC00AA72D7 /* main.m */,
 				FBE1BFDD211BF4BC00AA72D7 /* AGLKTextureLoader.h */,
 				FBE1BFDE211BF4BC00AA72D7 /* AGLKTextureLoader.m */,
+				FB859839211DA0A70019AD2E /* AGLKContext.h */,
+				FB859835211DA0A60019AD2E /* AGLKContext.m */,
+				FB859837211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.h */,
+				FB859836211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.m */,
+				FB859838211DA0A70019AD2E /* leaves.gif */,
 			);
 			path = "Ch03-02";
 			sourceTree = "<group>";
@@ -135,6 +148,7 @@
 			files = (
 				FBE1BFD1211BF3AC00AA72D7 /* LaunchScreen.storyboard in Resources */,
 				FBE1BFCE211BF3AC00AA72D7 /* Assets.xcassets in Resources */,
+				FB85983C211DA0A70019AD2E /* leaves.gif in Resources */,
 				FBE1BFCC211BF3AB00AA72D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB85983B211DA0A70019AD2E /* AGLKVertexAttribArrayBuffer.m in Sources */,
+				FB85983A211DA0A70019AD2E /* AGLKContext.m in Sources */,
 				FBE1BFDF211BF4BC00AA72D7 /* AGLKTextureLoader.m in Sources */,
 				FBE1BFC9211BF3AB00AA72D7 /* ViewController.m in Sources */,
 				FBE1BFD4211BF3AC00AA72D7 /* main.m in Sources */,

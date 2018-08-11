@@ -10,12 +10,15 @@
 
 // 该函数计算并返回最接近 2 的幂值，其结果 ≥ dimension && ≤ 1024
 NS_INLINE size_t AGLKCalculatePowerOf2ForDinmension(size_t dimension) {
+    size_t input = dimension;
     int position = 0;
     while (dimension > 1) {
         dimension >>= 1;
         position++;
     }
-    return 1 << (position + 1);
+    int result = 1 << position;
+    if (input > result) result <<= 1;
+    return result;
 }
 
 // 该函数返回 NSData 对象，包含了从给定的 Core Graphics 图像，CGImage 加载的字节数据。共函数同样返回（通过引用）2 的幂的宽高，用于从返回的 NSData 对象的字节数据初始化 OpenGL ES 纹理缓存。该 widthPtr 和 heightPtr 参数必须通过指针传递。
@@ -91,7 +94,7 @@ NS_INLINE NSData *AGLKDataWithResizedCGImageBytes(CGImageRef cgImage, size_t *wi
     // 1. 为缓存生成一个唯一标识符
     glGenTextures(1, &textureBufferID);
     // 2. 绑定缓存
-    glBindBuffer(GL_TEXTURE_2D, textureBufferID);
+    glBindTexture(GL_TEXTURE_2D, textureBufferID);
     // 3. 复制数据到缓存中
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei)width, (GLsizei)height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData.bytes);
     
