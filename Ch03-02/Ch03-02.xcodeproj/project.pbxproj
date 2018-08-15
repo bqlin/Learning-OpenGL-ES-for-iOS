@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB546B4C2123D74100DFABDA /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB546B4B2123D74000DFABDA /* earth.jpg */; };
 		FB85983A211DA0A70019AD2E /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FB859835211DA0A60019AD2E /* AGLKContext.m */; };
 		FB85983B211DA0A70019AD2E /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB859836211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.m */; };
 		FB85983C211DA0A70019AD2E /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB859838211DA0A70019AD2E /* leaves.gif */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB546B4B2123D74000DFABDA /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
 		FB859835211DA0A60019AD2E /* AGLKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKContext.m; sourceTree = "<group>"; };
 		FB859836211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
 		FB859837211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				FB859837211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.h */,
 				FB859836211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.m */,
 				FB859838211DA0A70019AD2E /* leaves.gif */,
+				FB546B4B2123D74000DFABDA /* earth.jpg */,
 			);
 			path = "Ch03-02";
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE1BFD1211BF3AC00AA72D7 /* LaunchScreen.storyboard in Resources */,
+				FB546B4C2123D74100DFABDA /* earth.jpg in Resources */,
 				FBE1BFCE211BF3AC00AA72D7 /* Assets.xcassets in Resources */,
 				FB85983C211DA0A70019AD2E /* leaves.gif in Resources */,
 				FBE1BFCC211BF3AB00AA72D7 /* Main.storyboard in Resources */,
