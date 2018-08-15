@@ -5,7 +5,6 @@
 //  Created by bqlin on 2018/7/31.
 //  Copyright © 2018年 Bq. All rights reserved.
 //
-// 封装了顶点缓存的 7 个步骤
 
 #import <GLKit/GLKit.h>
 
@@ -17,6 +16,9 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
     AGLKVertexAttribTexCoord1 = GLKVertexAttribTexCoord1,
 };
 
+/**
+ 封装了顶点缓存的 7 个步骤
+ */
 @interface AGLKVertexAttribArrayBuffer : NSObject
 
 /// 缓存标识符

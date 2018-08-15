@@ -5,10 +5,12 @@
 //  Created by bqlin on 2018/7/18.
 //  Copyright © 2018年 Bq. All rights reserved.
 //
-// EAGLContext 子类，仅添加了 `clearColor` 属性，使用 OC 封装了一些 C 风格的接口
 
 #import <GLKit/GLKit.h>
 
+/**
+ EAGLContext 子类，仅添加了 `clearColor` 属性，使用 OC 封装了一些 C 风格的接口
+ */
 @interface AGLKContext : EAGLContext
 
 /// 仅当设置该值时，背景色才有效，setter 内部调用 `glClearColor(clearColor.r, clearColor.g, clearColor.b, clearColor.a)`
