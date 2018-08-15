@@ -11,4 +11,5 @@ A Hands-on Guide to Modern 3D Graphics Programming
 | [Ch03-02](./Ch03-02) | 实现  `GLKTextureLoader`                 |
 | [Ch03-03](./Ch03-03) | 使用可交互的方式展示了纹理绘制的几种模式 |
 | [Ch03-04](./Ch03-04) | 混合片元颜色                             |
+| [Ch03-05](./Ch03-05) | 多重纹理                                 |
 
