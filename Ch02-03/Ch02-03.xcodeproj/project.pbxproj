@@ -64,6 +64,10 @@
 		FB313D2E210FF0EF0064F1A1 /* Ch02-03 */ = {
 			isa = PBXGroup;
 			children = (
+				FB313D45210FF1080064F1A1 /* AGLKContext.h */,
+				FB313D46210FF1080064F1A1 /* AGLKContext.m */,
+				FB313D48210FF3EC0064F1A1 /* AGLKVertexAttribArrayBuffer.h */,
+				FB313D49210FF3EC0064F1A1 /* AGLKVertexAttribArrayBuffer.m */,
 				FB313D2F210FF0EF0064F1A1 /* AppDelegate.h */,
 				FB313D30210FF0EF0064F1A1 /* AppDelegate.m */,
 				FB313D32210FF0EF0064F1A1 /* ViewController.h */,
@@ -73,10 +77,6 @@
 				FB313D3A210FF0F00064F1A1 /* LaunchScreen.storyboard */,
 				FB313D3D210FF0F00064F1A1 /* Info.plist */,
 				FB313D3E210FF0F00064F1A1 /* main.m */,
-				FB313D45210FF1080064F1A1 /* AGLKContext.h */,
-				FB313D46210FF1080064F1A1 /* AGLKContext.m */,
-				FB313D48210FF3EC0064F1A1 /* AGLKVertexAttribArrayBuffer.h */,
-				FB313D49210FF3EC0064F1A1 /* AGLKVertexAttribArrayBuffer.m */,
 			);
 			path = "Ch02-03";
 			sourceTree = "<group>";

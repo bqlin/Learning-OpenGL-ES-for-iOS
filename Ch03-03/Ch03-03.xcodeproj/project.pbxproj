@@ -13,9 +13,9 @@
 		FB45C6F4211EF86E00D50C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB45C6F3211EF86E00D50C63 /* Assets.xcassets */; };
 		FB45C6F7211EF86E00D50C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB45C6F5211EF86E00D50C63 /* LaunchScreen.storyboard */; };
 		FB45C6FA211EF86E00D50C63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB45C6F9211EF86E00D50C63 /* main.m */; };
-		FB45C707211EF91200D50C63 /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FB45C704211EF91200D50C63 /* AGLKContext.m */; };
-		FB45C709211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB45C706211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.m */; };
 		FB546B702123DC5200DFABDA /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = FB546B6F2123DC5100DFABDA /* grid.png */; };
+		FB546BB92124233300DFABDA /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB546BB62124233200DFABDA /* AGLKVertexAttribArrayBuffer.m */; };
+		FB546BBA2124233300DFABDA /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FB546BB72124233300DFABDA /* AGLKContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +29,11 @@
 		FB45C6F6211EF86E00D50C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB45C6F8211EF86E00D50C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB45C6F9211EF86E00D50C63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FB45C702211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
-		FB45C703211EF91200D50C63 /* AGLKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKContext.h; sourceTree = "<group>"; };
-		FB45C704211EF91200D50C63 /* AGLKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKContext.m; sourceTree = "<group>"; };
-		FB45C706211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
 		FB546B6F2123DC5100DFABDA /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grid.png; path = ../../Resources/grid.png; sourceTree = "<group>"; };
+		FB546BB52124233200DFABDA /* AGLKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLKContext.h; path = "/Users/bqlin/Workspace/Git/Bq/Learning-OpenGL-ES-for-iOS/Ch03-01/Ch03-01/../../Ch02-03/Ch02-03/AGLKContext.h"; sourceTree = "<absolute>"; };
+		FB546BB62124233200DFABDA /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLKVertexAttribArrayBuffer.m; path = "/Users/bqlin/Workspace/Git/Bq/Learning-OpenGL-ES-for-iOS/Ch03-01/Ch03-01/../../Ch02-03/Ch02-03/AGLKVertexAttribArrayBuffer.m"; sourceTree = "<absolute>"; };
+		FB546BB72124233300DFABDA /* AGLKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLKContext.m; path = "/Users/bqlin/Workspace/Git/Bq/Learning-OpenGL-ES-for-iOS/Ch03-01/Ch03-01/../../Ch02-03/Ch02-03/AGLKContext.m"; sourceTree = "<absolute>"; };
+		FB546BB82124233300DFABDA /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLKVertexAttribArrayBuffer.h; path = "/Users/bqlin/Workspace/Git/Bq/Learning-OpenGL-ES-for-iOS/Ch03-01/Ch03-01/../../Ch02-03/Ch02-03/AGLKVertexAttribArrayBuffer.h"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +66,10 @@
 		FB45C6E9211EF86D00D50C63 /* Ch03-03 */ = {
 			isa = PBXGroup;
 			children = (
+				FB546BB52124233200DFABDA /* AGLKContext.h */,
+				FB546BB72124233300DFABDA /* AGLKContext.m */,
+				FB546BB82124233300DFABDA /* AGLKVertexAttribArrayBuffer.h */,
+				FB546BB62124233200DFABDA /* AGLKVertexAttribArrayBuffer.m */,
 				FB45C6EA211EF86D00D50C63 /* AppDelegate.h */,
 				FB45C6EB211EF86D00D50C63 /* AppDelegate.m */,
 				FB45C6ED211EF86D00D50C63 /* ViewController.h */,
@@ -75,10 +79,6 @@
 				FB45C6F5211EF86E00D50C63 /* LaunchScreen.storyboard */,
 				FB45C6F8211EF86E00D50C63 /* Info.plist */,
 				FB45C6F9211EF86E00D50C63 /* main.m */,
-				FB45C703211EF91200D50C63 /* AGLKContext.h */,
-				FB45C704211EF91200D50C63 /* AGLKContext.m */,
-				FB45C702211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.h */,
-				FB45C706211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.m */,
 				FB546B6F2123DC5100DFABDA /* grid.png */,
 			);
 			path = "Ch03-03";
@@ -155,9 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB45C707211EF91200D50C63 /* AGLKContext.m in Sources */,
+				FB546BBA2124233300DFABDA /* AGLKContext.m in Sources */,
+				FB546BB92124233300DFABDA /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				FB45C6EF211EF86D00D50C63 /* ViewController.m in Sources */,
-				FB45C709211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				FB45C6FA211EF86E00D50C63 /* main.m in Sources */,
 				FB45C6EC211EF86D00D50C63 /* AppDelegate.m in Sources */,
 			);
