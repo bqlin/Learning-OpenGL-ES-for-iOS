@@ -95,7 +95,7 @@ NS_INLINE NSData *AGLKDataWithResizedCGImageBytes(CGImageRef cgImage, size_t *wi
     glGenTextures(1, &textureBufferID);
     // 2. 绑定缓存
     glBindTexture(GL_TEXTURE_2D, textureBufferID);
-    // 3. 复制数据到缓存中
+    // 3. 复制图片像素颜色数据到缓存中
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei)width, (GLsizei)height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData.bytes);
     
     // 设置纹理采样参数
