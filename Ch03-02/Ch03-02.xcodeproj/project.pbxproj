@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB546B4C2123D74100DFABDA /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB546B4B2123D74000DFABDA /* earth.jpg */; };
+		FB546B732123DC8700DFABDA /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB546B712123DC8700DFABDA /* leaves.gif */; };
+		FB546B742123DC8700DFABDA /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB546B722123DC8700DFABDA /* earth.jpg */; };
 		FB85983A211DA0A70019AD2E /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FB859835211DA0A60019AD2E /* AGLKContext.m */; };
 		FB85983B211DA0A70019AD2E /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB859836211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.m */; };
-		FB85983C211DA0A70019AD2E /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB859838211DA0A70019AD2E /* leaves.gif */; };
 		FBE1BFC6211BF3AB00AA72D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE1BFC5211BF3AB00AA72D7 /* AppDelegate.m */; };
 		FBE1BFC9211BF3AB00AA72D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE1BFC8211BF3AB00AA72D7 /* ViewController.m */; };
 		FBE1BFCC211BF3AB00AA72D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE1BFCA211BF3AB00AA72D7 /* Main.storyboard */; };
@@ -21,11 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB546B4B2123D74000DFABDA /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
+		FB546B712123DC8700DFABDA /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leaves.gif; path = ../../Resources/leaves.gif; sourceTree = "<group>"; };
+		FB546B722123DC8700DFABDA /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = earth.jpg; path = ../../Resources/earth.jpg; sourceTree = "<group>"; };
 		FB859835211DA0A60019AD2E /* AGLKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKContext.m; sourceTree = "<group>"; };
 		FB859836211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
 		FB859837211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
-		FB859838211DA0A70019AD2E /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leaves.gif; sourceTree = "<group>"; };
 		FB859839211DA0A70019AD2E /* AGLKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKContext.h; sourceTree = "<group>"; };
 		FBE1BFC1211BF3AB00AA72D7 /* Ch03-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ch03-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE1BFC4211BF3AB00AA72D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 				FB859835211DA0A60019AD2E /* AGLKContext.m */,
 				FB859837211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.h */,
 				FB859836211DA0A60019AD2E /* AGLKVertexAttribArrayBuffer.m */,
-				FB859838211DA0A70019AD2E /* leaves.gif */,
-				FB546B4B2123D74000DFABDA /* earth.jpg */,
+				FB546B722123DC8700DFABDA /* earth.jpg */,
+				FB546B712123DC8700DFABDA /* leaves.gif */,
 			);
 			path = "Ch03-02";
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE1BFD1211BF3AC00AA72D7 /* LaunchScreen.storyboard in Resources */,
-				FB546B4C2123D74100DFABDA /* earth.jpg in Resources */,
+				FB546B742123DC8700DFABDA /* earth.jpg in Resources */,
 				FBE1BFCE211BF3AC00AA72D7 /* Assets.xcassets in Resources */,
-				FB85983C211DA0A70019AD2E /* leaves.gif in Resources */,
+				FB546B732123DC8700DFABDA /* leaves.gif in Resources */,
 				FBE1BFCC211BF3AB00AA72D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

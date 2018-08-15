@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		FB313D22210FEEC00064F1A1 /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB313D21210FEEC00064F1A1 /* AGLKVertexAttribArrayBuffer.m */; };
+		FB546B772123DCB100DFABDA /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB546B752123DCB000DFABDA /* leaves.gif */; };
+		FB546B782123DCB100DFABDA /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB546B762123DCB000DFABDA /* earth.jpg */; };
 		FB76496F20FD80DB00A6DFA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB76496E20FD80DB00A6DFA2 /* AppDelegate.m */; };
 		FB76497220FD80DB00A6DFA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB76497120FD80DB00A6DFA2 /* ViewController.m */; };
 		FB76497520FD80DB00A6DFA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB76497320FD80DB00A6DFA2 /* Main.storyboard */; };
 		FB76497720FD80DD00A6DFA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB76497620FD80DD00A6DFA2 /* Assets.xcassets */; };
 		FB76497A20FD80DD00A6DFA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB76497820FD80DD00A6DFA2 /* LaunchScreen.storyboard */; };
 		FB76497D20FD80DD00A6DFA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB76497C20FD80DD00A6DFA2 /* main.m */; };
-		FBE1BFB3211BE8A400AA72D7 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBE1BFB2211BE8A300AA72D7 /* earth.jpg */; };
-		FBE1BFB7211BEBFD00AA72D7 /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = FBE1BFB6211BEBFC00AA72D7 /* leaves.gif */; };
 		FBE3CF5320FECAD500A10CBC /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE3CF5220FECAD500A10CBC /* AGLKContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB313D20210FEEC00064F1A1 /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
 		FB313D21210FEEC00064F1A1 /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
+		FB546B752123DCB000DFABDA /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leaves.gif; path = ../../Resources/leaves.gif; sourceTree = "<group>"; };
+		FB546B762123DCB000DFABDA /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = earth.jpg; path = ../../Resources/earth.jpg; sourceTree = "<group>"; };
 		FB76496A20FD80DB00A6DFA2 /* Ch03-01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ch03-01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB76496D20FD80DB00A6DFA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB76496E20FD80DB00A6DFA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,8 +34,6 @@
 		FB76497920FD80DD00A6DFA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB76497B20FD80DD00A6DFA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB76497C20FD80DD00A6DFA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FBE1BFB2211BE8A300AA72D7 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
-		FBE1BFB6211BEBFC00AA72D7 /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leaves.gif; sourceTree = "<group>"; };
 		FBE3CF5120FECAD500A10CBC /* AGLKContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKContext.h; sourceTree = "<group>"; };
 		FBE3CF5220FECAD500A10CBC /* AGLKContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,8 +82,8 @@
 				FB76497820FD80DD00A6DFA2 /* LaunchScreen.storyboard */,
 				FB76497B20FD80DD00A6DFA2 /* Info.plist */,
 				FB76497C20FD80DD00A6DFA2 /* main.m */,
-				FBE1BFB2211BE8A300AA72D7 /* earth.jpg */,
-				FBE1BFB6211BEBFC00AA72D7 /* leaves.gif */,
+				FB546B762123DCB000DFABDA /* earth.jpg */,
+				FB546B752123DCB000DFABDA /* leaves.gif */,
 			);
 			path = "Ch03-01";
 			sourceTree = "<group>";
@@ -145,10 +145,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBE1BFB3211BE8A400AA72D7 /* earth.jpg in Resources */,
-				FBE1BFB7211BEBFD00AA72D7 /* leaves.gif in Resources */,
 				FB76497A20FD80DD00A6DFA2 /* LaunchScreen.storyboard in Resources */,
+				FB546B782123DCB100DFABDA /* earth.jpg in Resources */,
 				FB76497720FD80DD00A6DFA2 /* Assets.xcassets in Resources */,
+				FB546B772123DCB100DFABDA /* leaves.gif in Resources */,
 				FB76497520FD80DB00A6DFA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

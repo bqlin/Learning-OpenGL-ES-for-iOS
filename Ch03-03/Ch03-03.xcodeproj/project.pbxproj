@@ -14,8 +14,8 @@
 		FB45C6F7211EF86E00D50C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB45C6F5211EF86E00D50C63 /* LaunchScreen.storyboard */; };
 		FB45C6FA211EF86E00D50C63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB45C6F9211EF86E00D50C63 /* main.m */; };
 		FB45C707211EF91200D50C63 /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FB45C704211EF91200D50C63 /* AGLKContext.m */; };
-		FB45C708211EF91200D50C63 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = FB45C705211EF91200D50C63 /* grid.png */; };
 		FB45C709211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB45C706211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.m */; };
+		FB546B702123DC5200DFABDA /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = FB546B6F2123DC5100DFABDA /* grid.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		FB45C702211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
 		FB45C703211EF91200D50C63 /* AGLKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKContext.h; sourceTree = "<group>"; };
 		FB45C704211EF91200D50C63 /* AGLKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKContext.m; sourceTree = "<group>"; };
-		FB45C705211EF91200D50C63 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
 		FB45C706211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
+		FB546B6F2123DC5100DFABDA /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grid.png; path = ../../Resources/grid.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 				FB45C704211EF91200D50C63 /* AGLKContext.m */,
 				FB45C702211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.h */,
 				FB45C706211EF91200D50C63 /* AGLKVertexAttribArrayBuffer.m */,
-				FB45C705211EF91200D50C63 /* grid.png */,
+				FB546B6F2123DC5100DFABDA /* grid.png */,
 			);
 			path = "Ch03-03";
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB45C6F7211EF86E00D50C63 /* LaunchScreen.storyboard in Resources */,
-				FB45C708211EF91200D50C63 /* grid.png in Resources */,
+				FB546B702123DC5200DFABDA /* grid.png in Resources */,
 				FB45C6F4211EF86E00D50C63 /* Assets.xcassets in Resources */,
 				FB45C6F2211EF86D00D50C63 /* Main.storyboard in Resources */,
 			);
