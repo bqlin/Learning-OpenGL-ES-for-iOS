@@ -13,6 +13,10 @@
 		FB546B632123DAC300DFABDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB546B622123DAC300DFABDA /* Assets.xcassets */; };
 		FB546B662123DAC300DFABDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB546B642123DAC300DFABDA /* LaunchScreen.storyboard */; };
 		FB546B692123DAC300DFABDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB546B682123DAC300DFABDA /* main.m */; };
+		FB546B7B2123DD0100DFABDA /* beetle.png in Resources */ = {isa = PBXBuildFile; fileRef = FB546B792123DD0100DFABDA /* beetle.png */; };
+		FB546B7C2123DD0100DFABDA /* leaves_transparency.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB546B7A2123DD0100DFABDA /* leaves_transparency.gif */; };
+		FB546B812123DD2200DFABDA /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FB546B7F2123DD2200DFABDA /* AGLKContext.m */; };
+		FB546B822123DD2200DFABDA /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB546B802123DD2200DFABDA /* AGLKVertexAttribArrayBuffer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		FB546B652123DAC300DFABDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB546B672123DAC300DFABDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB546B682123DAC300DFABDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB546B792123DD0100DFABDA /* beetle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beetle.png; path = ../../Resources/beetle.png; sourceTree = "<group>"; };
+		FB546B7A2123DD0100DFABDA /* leaves_transparency.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leaves_transparency.gif; path = ../../Resources/leaves_transparency.gif; sourceTree = "<group>"; };
+		FB546B7D2123DD2200DFABDA /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLKVertexAttribArrayBuffer.h; path = "../../Ch03-03/Ch03-03/AGLKVertexAttribArrayBuffer.h"; sourceTree = "<group>"; };
+		FB546B7E2123DD2200DFABDA /* AGLKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLKContext.h; path = "../../Ch03-03/Ch03-03/AGLKContext.h"; sourceTree = "<group>"; };
+		FB546B7F2123DD2200DFABDA /* AGLKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLKContext.m; path = "../../Ch03-03/Ch03-03/AGLKContext.m"; sourceTree = "<group>"; };
+		FB546B802123DD2200DFABDA /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLKVertexAttribArrayBuffer.m; path = "../../Ch03-03/Ch03-03/AGLKVertexAttribArrayBuffer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,10 @@
 		FB546B582123DAC200DFABDA /* Ch03-04 */ = {
 			isa = PBXGroup;
 			children = (
+				FB546B7E2123DD2200DFABDA /* AGLKContext.h */,
+				FB546B7F2123DD2200DFABDA /* AGLKContext.m */,
+				FB546B7D2123DD2200DFABDA /* AGLKVertexAttribArrayBuffer.h */,
+				FB546B802123DD2200DFABDA /* AGLKVertexAttribArrayBuffer.m */,
 				FB546B592123DAC200DFABDA /* AppDelegate.h */,
 				FB546B5A2123DAC200DFABDA /* AppDelegate.m */,
 				FB546B5C2123DAC200DFABDA /* ViewController.h */,
@@ -67,6 +81,8 @@
 				FB546B642123DAC300DFABDA /* LaunchScreen.storyboard */,
 				FB546B672123DAC300DFABDA /* Info.plist */,
 				FB546B682123DAC300DFABDA /* main.m */,
+				FB546B792123DD0100DFABDA /* beetle.png */,
+				FB546B7A2123DD0100DFABDA /* leaves_transparency.gif */,
 			);
 			path = "Ch03-04";
 			sourceTree = "<group>";
@@ -130,6 +146,8 @@
 			files = (
 				FB546B662123DAC300DFABDA /* LaunchScreen.storyboard in Resources */,
 				FB546B632123DAC300DFABDA /* Assets.xcassets in Resources */,
+				FB546B7B2123DD0100DFABDA /* beetle.png in Resources */,
+				FB546B7C2123DD0100DFABDA /* leaves_transparency.gif in Resources */,
 				FB546B612123DAC200DFABDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB546B812123DD2200DFABDA /* AGLKContext.m in Sources */,
 				FB546B5E2123DAC200DFABDA /* ViewController.m in Sources */,
+				FB546B822123DD2200DFABDA /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				FB546B692123DAC300DFABDA /* main.m in Sources */,
 				FB546B5B2123DAC200DFABDA /* AppDelegate.m in Sources */,
 			);

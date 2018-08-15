@@ -145,7 +145,7 @@ static GLKVector3 movementVectors[3] = {
     view.context = [[AGLKContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     [AGLKContext setCurrentContext:view.context];
     
-    // 创建基本效果，提供标准 OpenGL ES 着色语言程序，并设置常量以后后续渲染
+    // 创建基本效果，提供标准 OpenGL ES 着色语言程序，并设置常量以供后续渲染
     _baseEffect = [[GLKBaseEffect alloc] init];
     _baseEffect.useConstantColor = GL_TRUE;
     _baseEffect.constantColor = GLKVector4Make(1, 1, 1, 1);
