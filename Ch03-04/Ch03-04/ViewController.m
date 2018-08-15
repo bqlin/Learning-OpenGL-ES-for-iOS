@@ -60,15 +60,18 @@ static const SceneVertex vertices[] = {
     // 创建包含用于绘制的顶点缓存
     _vertexBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:sizeof(SceneVertex) numberOfVertices:sizeof(vertices) / sizeof(SceneVertex) bytes:vertices usage:GL_STATIC_DRAW];
     
+    NSDictionary *options = @{GLKTextureLoaderOriginBottomLeft: @(YES)};
+    options = nil;
+    
     // 配置纹理0
     CGImageRef imageRef0 = [UIImage imageNamed:@"leaves_transparency.gif"].CGImage;
-    _textureInfo0 = [GLKTextureLoader textureWithCGImage:imageRef0 options:@{GLKTextureLoaderOriginBottomLeft: @(YES)} error:nil];
+    _textureInfo0 = [GLKTextureLoader textureWithCGImage:imageRef0 options:options error:nil];
     
     // 配置纹理1
     CGImageRef imageRef1 = [UIImage imageNamed:@"beetle.png"].CGImage;
-    _textureInfo1 = [GLKTextureLoader textureWithCGImage:imageRef1 options:@{GLKTextureLoaderOriginBottomLeft: @(YES)} error:nil];
+    _textureInfo1 = [GLKTextureLoader textureWithCGImage:imageRef1 options:options error:nil];
     
-    // 启用片段与帧缓冲内容混合
+    // 启用片元与帧缓冲内容混合
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
