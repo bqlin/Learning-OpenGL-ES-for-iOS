@@ -17,6 +17,8 @@
 		FB546C0221243EBF00DFABDA /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FB546BFF21243EBE00DFABDA /* AGLKContext.m */; };
 		FB546C0521243ED500DFABDA /* beetle.png in Resources */ = {isa = PBXBuildFile; fileRef = FB546C0321243ED500DFABDA /* beetle.png */; };
 		FB546C0621243ED500DFABDA /* leaves_transparency.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB546C0421243ED500DFABDA /* leaves_transparency.gif */; };
+		FB546C0921243F8600DFABDA /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FB546C0821243F8600DFABDA /* Shader.fsh */; };
+		FB546C0B21243F9800DFABDA /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FB546C0A21243F9800DFABDA /* Shader.vsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		FB546C0021243EBE00DFABDA /* AGLKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLKContext.h; path = "../../Ch02-03/Ch02-03/AGLKContext.h"; sourceTree = "<group>"; };
 		FB546C0321243ED500DFABDA /* beetle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beetle.png; path = ../../Resources/beetle.png; sourceTree = "<group>"; };
 		FB546C0421243ED500DFABDA /* leaves_transparency.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leaves_transparency.gif; path = ../../Resources/leaves_transparency.gif; sourceTree = "<group>"; };
+		FB546C0821243F8600DFABDA /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		FB546C0A21243F9800DFABDA /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		FB546BD821243D2000DFABDA /* Ch03-06 */ = {
 			isa = PBXGroup;
 			children = (
+				FB546C0721243F3300DFABDA /* Shaders */,
 				FB546C0021243EBE00DFABDA /* AGLKContext.h */,
 				FB546BFF21243EBE00DFABDA /* AGLKContext.m */,
 				FB546BFD21243EBE00DFABDA /* AGLKVertexAttribArrayBuffer.h */,
@@ -85,6 +90,15 @@
 				FB546C0421243ED500DFABDA /* leaves_transparency.gif */,
 			);
 			path = "Ch03-06";
+			sourceTree = "<group>";
+		};
+		FB546C0721243F3300DFABDA /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				FB546C0821243F8600DFABDA /* Shader.fsh */,
+				FB546C0A21243F9800DFABDA /* Shader.vsh */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +158,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB546C0921243F8600DFABDA /* Shader.fsh in Resources */,
+				FB546C0B21243F9800DFABDA /* Shader.vsh in Resources */,
 				FB546BE621243D2200DFABDA /* LaunchScreen.storyboard in Resources */,
 				FB546BE321243D2200DFABDA /* Assets.xcassets in Resources */,
 				FB546C0521243ED500DFABDA /* beetle.png in Resources */,
