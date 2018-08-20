@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB4BC06B212A533200D49F4E /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB4BC06A212A533200D49F4E /* leaves.gif */; };
+		FB4BC06D212A534800D49F4E /* leaves_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB4BC06C212A534800D49F4E /* leaves_2.gif */; };
 		FB546BDB21243D2000DFABDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB546BDA21243D2000DFABDA /* AppDelegate.m */; };
 		FB546BDE21243D2000DFABDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB546BDD21243D2000DFABDA /* ViewController.m */; };
 		FB546BE121243D2000DFABDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB546BDF21243D2000DFABDA /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB4BC06A212A533200D49F4E /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leaves.gif; path = ../../Resources/leaves.gif; sourceTree = "<group>"; };
+		FB4BC06C212A534800D49F4E /* leaves_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leaves_2.gif; path = ../../Resources/leaves_2.gif; sourceTree = "<group>"; };
 		FB546BD621243D2000DFABDA /* Ch03-06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ch03-06.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB546BD921243D2000DFABDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB546BDA21243D2000DFABDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				FB546BE821243D2200DFABDA /* main.m */,
 				FB546C0321243ED500DFABDA /* beetle.png */,
 				FB546C0421243ED500DFABDA /* leaves_transparency.gif */,
+				FB4BC06A212A533200D49F4E /* leaves.gif */,
+				FB4BC06C212A534800D49F4E /* leaves_2.gif */,
 			);
 			path = "Ch03-06";
 			sourceTree = "<group>";
@@ -163,7 +169,9 @@
 				FB546BE621243D2200DFABDA /* LaunchScreen.storyboard in Resources */,
 				FB546BE321243D2200DFABDA /* Assets.xcassets in Resources */,
 				FB546C0521243ED500DFABDA /* beetle.png in Resources */,
+				FB4BC06D212A534800D49F4E /* leaves_2.gif in Resources */,
 				FB546C0621243ED500DFABDA /* leaves_transparency.gif in Resources */,
+				FB4BC06B212A533200D49F4E /* leaves.gif in Resources */,
 				FB546BE121243D2000DFABDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

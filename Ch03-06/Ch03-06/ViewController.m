@@ -153,7 +153,7 @@ static const SceneVertex vertices[] = {
     NSDictionary *options = nil;
     
     // 配置纹理0
-    CGImageRef imageRef0 = [UIImage imageNamed:@"leaves_transparency.gif"].CGImage;
+    CGImageRef imageRef0 = [UIImage imageNamed:@"leaves_2.gif"].CGImage;
     GLKTextureInfo *textureInfo0 = [GLKTextureLoader textureWithCGImage:imageRef0 options:options error:nil];
     _baseEffect.texture2d0.name = textureInfo0.name;
     _baseEffect.texture2d0.target = textureInfo0.target;
