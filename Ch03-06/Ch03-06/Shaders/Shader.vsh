@@ -9,9 +9,9 @@ attribute vec2 aTextureCoord0;
 attribute vec2 aTextureCoord1;
 
 // Varyings
-varyings lowp vec4 vColor;
-varyings lowp vec2 vTextureCoord0;
-varyings lowp vec2 vTextureCoord1;
+varying lowp vec4 vColor;
+varying lowp vec2 vTextureCoord0;
+varying lowp vec2 vTextureCoord1;
 
 // UNIFORMS
 uniform mat4 uModelViewProjectionMatrix;
@@ -24,7 +24,7 @@ void main() {
 	vec4 diffuseColor = vec4(.7, .7, .7, 1);
 
 	// 计算片元浅色
-	float nDotVP = max(0, dot(eyeNormal, lightPosition));
+	float nDotVP = max(.0, dot(eyeNormal, lightPosition)); // 类型不对都不会编译通过！
 	vColor = vec4((diffuseColor * nDotVP).xyz, diffuseColor.a);
 
 	// 传递两组纹理坐标给为修改的片元着色器
