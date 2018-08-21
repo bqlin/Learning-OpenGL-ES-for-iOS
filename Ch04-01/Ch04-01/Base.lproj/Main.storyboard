@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d5D-5A-g9r">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="jNK-GR-eMn">
+            <objects>
+                <viewController id="Ywg-Kp-2Cf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dIM-98-DZ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="m2k-41-Gwf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uy6-Nu-jEz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEB-ro-HWG">
+                                <rect key="frame" x="95" y="225" width="130" height="30"/>
+                                <state key="normal" title="Lighting simulation"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="JxK-BF-dYs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nEB-ro-HWG" firstAttribute="centerY" secondItem="uy6-Nu-jEz" secondAttribute="centerY" id="91C-kn-f7O"/>
+                            <constraint firstItem="nEB-ro-HWG" firstAttribute="centerX" secondItem="uy6-Nu-jEz" secondAttribute="centerX" id="qDU-pb-8TU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="o8F-Wa-tgE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Gf-GS-Qvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631.875" y="-565"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,14 +50,86 @@
                         <viewControllerLayoutGuide type="top" id="riy-An-Cl0"/>
                         <viewControllerLayoutGuide type="bottom" id="mdu-Yn-xGZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GLKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p0O-ee-7rl">
+                                <rect key="frame" x="65" y="72" width="190.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Use Face Normals:" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ujk-GF-LkX">
+                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" size="system"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="shadowColor" red="0.69021739130000004" green="0.69021739130000004" blue="0.69021739130000004" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <switch opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SNe-W3-fsY">
+                                        <rect key="frame" x="141.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="takeShouldUseFaceNormalsFrom:" destination="BYZ-38-t0r" eventType="valueChanged" id="soV-oe-8dD"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wgg-Jc-851">
+                                <rect key="frame" x="78" y="419" width="164" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Draw Normals:" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ac4-Tz-Xf3">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" size="system"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="shadowColor" red="0.69021739130000004" green="0.69021739130000004" blue="0.69021739130000004" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <switch opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LEG-La-Snd">
+                                        <rect key="frame" x="115" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="takeShouldDrawNormalsFrom:" destination="BYZ-38-t0r" eventType="valueChanged" id="y0S-1l-T6K"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <slider opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="66W-ZI-hek">
+                                <rect key="frame" x="14" y="450" width="292" height="31"/>
+                                <connections>
+                                    <action selector="takeCenterVertexHeightFrom:" destination="BYZ-38-t0r" eventType="valueChanged" id="RSX-fq-FyZ"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="66W-ZI-hek" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1OP-at-wFR"/>
+                            <constraint firstItem="Wgg-Jc-851" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ARW-g3-4bo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="66W-ZI-hek" secondAttribute="trailing" id="Fgy-sz-AtE"/>
+                            <constraint firstItem="66W-ZI-hek" firstAttribute="top" secondItem="Wgg-Jc-851" secondAttribute="bottom" id="GXx-gg-OpC"/>
+                            <constraint firstItem="mdu-Yn-xGZ" firstAttribute="top" secondItem="66W-ZI-hek" secondAttribute="bottom" id="dny-JG-w0e"/>
+                            <constraint firstItem="p0O-ee-7rl" firstAttribute="top" secondItem="riy-An-Cl0" secondAttribute="bottom" constant="8" id="ecj-GM-jfx"/>
+                            <constraint firstItem="p0O-ee-7rl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ljZ-HT-cP0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1395" y="-565"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ktz-4d-Ttc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d5D-5A-g9r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4bg-4U-Qfq">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ywg-Kp-2Cf" kind="relationship" relationship="rootViewController" id="SOc-5p-513"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMz-KG-Q25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="-565"/>
         </scene>
     </scenes>
 </document>
