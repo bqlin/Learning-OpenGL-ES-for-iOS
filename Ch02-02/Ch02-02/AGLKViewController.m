@@ -75,6 +75,7 @@ static const NSInteger kAGLKDefaultFramePerSecond = 30;
 // MARK: -
 
 - (void)drawView:(id)sender {
+    // 重绘
     [(AGLKView *)self.view display];
 }
 

@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger, AGLKViewDrawableDepthFormat) {
 @property (nonatomic, assign, readonly) NSInteger drawableHeight;
 @property (nonatomic, assign) AGLKViewDrawableDepthFormat drawableDepthFormat;
 
-/// 调用该方法来重绘 OpenGL ES 帧缓存。该方法配置了 OpenGL ES，-drawRect: 将调用该方法
+/// 调用该方法来重绘 OpenGL ES 帧缓存，配置 GL 并进行回调。
 - (void)display;
 
 @end
