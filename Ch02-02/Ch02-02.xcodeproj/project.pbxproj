@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB6E0E3C21913A6000F3BE76 /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6E0E3B21913A6000F3BE76 /* AGLKView.m */; };
 		FBCA7057219053D4006CE446 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA7056219053D4006CE446 /* AppDelegate.m */; };
 		FBCA705A219053D4006CE446 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA7059219053D4006CE446 /* ViewController.m */; };
 		FBCA705D219053D4006CE446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCA705B219053D4006CE446 /* Main.storyboard */; };
 		FBCA705F219053D5006CE446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCA705E219053D5006CE446 /* Assets.xcassets */; };
 		FBCA7062219053D5006CE446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCA7060219053D5006CE446 /* LaunchScreen.storyboard */; };
 		FBCA7065219053D5006CE446 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA7064219053D5006CE446 /* main.m */; };
-		FBCA706D21905414006CE446 /* AGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA706C21905414006CE446 /* AGLKViewController.m */; };
+		FBEC0CD5219186CA00484DD3 /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEC0CD2219186CA00484DD3 /* AGLKView.m */; };
+		FBEC0CD6219186CA00484DD3 /* AGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEC0CD3219186CA00484DD3 /* AGLKViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB6E0E3A21913A6000F3BE76 /* AGLKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKView.h; sourceTree = "<group>"; };
-		FB6E0E3B21913A6000F3BE76 /* AGLKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKView.m; sourceTree = "<group>"; };
 		FBCA7052219053D4006CE446 /* Ch02-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ch02-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCA7055219053D4006CE446 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FBCA7056219053D4006CE446 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -30,8 +28,10 @@
 		FBCA7061219053D5006CE446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBCA7063219053D5006CE446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBCA7064219053D5006CE446 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FBCA706B21905414006CE446 /* AGLKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKViewController.h; sourceTree = "<group>"; };
-		FBCA706C21905414006CE446 /* AGLKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKViewController.m; sourceTree = "<group>"; };
+		FBEC0CD1219186CA00484DD3 /* AGLKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLKView.h; path = ../../AGLKit/AGLKView.h; sourceTree = "<group>"; };
+		FBEC0CD2219186CA00484DD3 /* AGLKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLKView.m; path = ../../AGLKit/AGLKView.m; sourceTree = "<group>"; };
+		FBEC0CD3219186CA00484DD3 /* AGLKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLKViewController.m; path = ../../AGLKit/AGLKViewController.m; sourceTree = "<group>"; };
+		FBEC0CD4219186CA00484DD3 /* AGLKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLKViewController.h; path = ../../AGLKit/AGLKViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +64,14 @@
 		FBCA7054219053D4006CE446 /* Ch02-02 */ = {
 			isa = PBXGroup;
 			children = (
+				FBEC0CD1219186CA00484DD3 /* AGLKView.h */,
+				FBEC0CD2219186CA00484DD3 /* AGLKView.m */,
+				FBEC0CD4219186CA00484DD3 /* AGLKViewController.h */,
+				FBEC0CD3219186CA00484DD3 /* AGLKViewController.m */,
 				FBCA7055219053D4006CE446 /* AppDelegate.h */,
 				FBCA7056219053D4006CE446 /* AppDelegate.m */,
 				FBCA7058219053D4006CE446 /* ViewController.h */,
 				FBCA7059219053D4006CE446 /* ViewController.m */,
-				FBCA706B21905414006CE446 /* AGLKViewController.h */,
-				FBCA706C21905414006CE446 /* AGLKViewController.m */,
-				FB6E0E3A21913A6000F3BE76 /* AGLKView.h */,
-				FB6E0E3B21913A6000F3BE76 /* AGLKView.m */,
 				FBCA705B219053D4006CE446 /* Main.storyboard */,
 				FBCA705E219053D5006CE446 /* Assets.xcassets */,
 				FBCA7060219053D5006CE446 /* LaunchScreen.storyboard */,
@@ -151,11 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB6E0E3C21913A6000F3BE76 /* AGLKView.m in Sources */,
+				FBEC0CD6219186CA00484DD3 /* AGLKViewController.m in Sources */,
 				FBCA705A219053D4006CE446 /* ViewController.m in Sources */,
-				FBCA706D21905414006CE446 /* AGLKViewController.m in Sources */,
 				FBCA7065219053D5006CE446 /* main.m in Sources */,
 				FBCA7057219053D4006CE446 /* AppDelegate.m in Sources */,
+				FBEC0CD5219186CA00484DD3 /* AGLKView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -245,14 +245,14 @@ static const SceneVertex vertices[] = {
     _program = glCreateProgram();
     
     // 创建并编译顶点着色器
-    vertShaderPath = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
+    vertShaderPath = [[NSBundle mainBundle] pathForResource:@"Shader_Ch03_06" ofType:@"vsh"];
     if (![self compileShader:&vertShader type:GL_VERTEX_SHADER path:vertShaderPath]) {
         NSLog(@"Failed to compile vertex shader");
         return NO;
     }
     
     // 创建并编译片元着色器
-    fragShaderPath = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
+    fragShaderPath = [[NSBundle mainBundle] pathForResource:@"Shader_Ch03_06" ofType:@"fsh"];
     if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER path:fragShaderPath]) {
         NSLog(@"Failed to compile fragment shader");
         return NO;
