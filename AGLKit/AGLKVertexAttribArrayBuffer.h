@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
 
 /**
  重新加载存储在接收者的数据 2️⃣3️⃣
- 用途使用 `GL_DYNAMIC_DRAW`
+ 数据赋值到缓存的用途使用 `GL_DYNAMIC_DRAW`
 
  @param stride 步幅
  @param count 顶点数量

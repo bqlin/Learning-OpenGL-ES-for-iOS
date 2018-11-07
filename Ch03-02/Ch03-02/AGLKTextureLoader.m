@@ -96,7 +96,16 @@ NS_INLINE NSData *AGLKDataWithResizedCGImageBytes(CGImageRef cgImage, size_t *wi
     // 2. 绑定缓存
     glBindTexture(GL_TEXTURE_2D, textureBufferID);
     // 3. 复制图片像素颜色数据到缓存中
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei)width, (GLsizei)height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData.bytes);
+    glTexImage2D(GL_TEXTURE_2D, // 用于 2D 纹理
+                 0, // 指定 MIP 贴图初始细节级别，此处不使用 MIP 贴图
+                 GL_RGBA, // 每个纹素需要保存的信息
+                 (GLsizei)width, // 图像宽度，2 的幂
+                 (GLsizei)height, // 图像高度，2 的幂
+                 0,// 围绕纹素的边界大小
+                 GL_RGBA, // 初始化缓存每个像素要保存的信息，应与参数 3 保持一致
+                 GL_UNSIGNED_BYTE, // 缓存中的纹素数据锁使用的位编码类型，GL_UNSIGNED_BYTE 可以提供最佳的色彩质量，RGBA 纹素需要读取 4 字节（32 位）；而其他类型则是使用 2 字节的 short 来存储
+                 imageData.bytes // 图像数据
+                 );
     
     // 设置纹理采样参数
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);

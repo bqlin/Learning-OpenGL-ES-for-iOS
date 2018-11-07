@@ -61,7 +61,6 @@ static const SceneVertex vertices[] = {
     _vertexBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:sizeof(SceneVertex) numberOfVertices:sizeof(vertices) / sizeof(SceneVertex) bytes:vertices usage:GL_STATIC_DRAW];
     
     NSDictionary *options = @{GLKTextureLoaderOriginBottomLeft: @(YES)};
-    options = nil;
     
     // 配置纹理0
     CGImageRef imageRef0 = [UIImage imageNamed:@"leaves_transparency.gif"].CGImage;
@@ -80,9 +79,12 @@ static const SceneVertex vertices[] = {
     // 清除帧缓存
     [(AGLKContext *)view.context clear:GL_COLOR_BUFFER_BIT];
     
+    // 为着色器提供顶点位置
     [_vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition numberOfCoordinates:3 attribOffset:offsetof(SceneVertex, positionCoords) shouldEnable:YES];
+    // 为着色器提供一组纹理坐标
     [_vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord0 numberOfCoordinates:2 attribOffset:offsetof(SceneVertex, textureCoords) shouldEnable:YES];
     
+    // 设定纹理1
     _baseEffect.texture2d0.name = _textureInfo0.name;
     _baseEffect.texture2d0.target = _textureInfo0.target;
     [_baseEffect prepareToDraw];
@@ -90,6 +92,7 @@ static const SceneVertex vertices[] = {
     // 绘制当前绑定的顶点缓存中的三角形
     [_vertexBuffer drawArrayWithMode:GL_TRIANGLES startVertexIndex:0 numberOfVertices:sizeof(vertices) / sizeof(SceneVertex)];
     
+    // 设定纹理2
     _baseEffect.texture2d0.name = _textureInfo1.name;
     _baseEffect.texture2d0.target = _textureInfo1.target;
     [_baseEffect prepareToDraw];

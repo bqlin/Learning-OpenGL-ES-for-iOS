@@ -41,6 +41,11 @@ static const SceneVertex vertices[] = {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    // 输出支持的纹理单元个数
+    //GLint iUnits;
+    //glGetIntegerv(GL_MAX_TEXTURE_UNITS, &iUnits);
+    //NSLog(@"最大支持纹理单元个数：%d", iUnits);
+    
     // 确认加载的 view
     GLKView *view = (GLKView *)self.view;
     NSAssert([view isKindOfClass:[GLKView class]], @"View is not a GLKView");
@@ -69,12 +74,14 @@ static const SceneVertex vertices[] = {
     _baseEffect.texture2d0.name = textureInfo0.name;
     _baseEffect.texture2d0.target = textureInfo0.target;
     
-    // 纹理0
+    // 纹理1
     CGImageRef imageRef1 = [UIImage imageNamed:@"beetle.png"].CGImage;
     GLKTextureInfo *textureInfo1 = [GLKTextureLoader textureWithCGImage:imageRef1 options:options error:nil];
     _baseEffect.texture2d1.name = textureInfo1.name;
     _baseEffect.texture2d1.target = textureInfo1.target;
     
+    // 无需明确启动与帧缓存的像素颜色渲染的混合
+    // 配置多重纹理混合模式
     _baseEffect.texture2d1.envMode = GLKTextureEnvModeDecal;
 }
 
@@ -82,8 +89,11 @@ static const SceneVertex vertices[] = {
     // 清除帧缓存
     [(AGLKContext *)view.context clear:GL_COLOR_BUFFER_BIT];
     
+    // 为着色器提供顶点位置
     [_vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition numberOfCoordinates:3 attribOffset:offsetof(SceneVertex, positionCoords) shouldEnable:YES];
+    // 为着色器提供一组纹理坐标
     [_vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord0 numberOfCoordinates:2 attribOffset:offsetof(SceneVertex, textureCoords) shouldEnable:YES];
+    // 为着色器提供第二组纹理坐标
     [_vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord1 numberOfCoordinates:2 attribOffset:offsetof(SceneVertex, textureCoords) shouldEnable:YES];
     
     [_baseEffect prepareToDraw];

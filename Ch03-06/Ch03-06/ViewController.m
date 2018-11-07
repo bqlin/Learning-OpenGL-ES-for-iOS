@@ -85,17 +85,10 @@ static const SceneVertex vertices[] = {
     {{-.5, .5, -.5}, {0, 0, -1}, {0, 4}},
 };
 
-@interface GLKEffectPropertyTexture (AGLKAdditions)
-
-- (void)aglkSetParameter:(GLenum)parameterID value:(GLint)value;
-
-@end
-
 @implementation GLKEffectPropertyTexture (AGLKAdditions)
 
 - (void)aglkSetParameter:(GLenum)parameterID value:(GLint)value {
     glBindTexture(self.target, self.name);
-    
     glTexParameteri(self.target, parameterID, value);
 }
 
@@ -114,6 +107,7 @@ static const SceneVertex vertices[] = {
     
     GLKMatrix4 _modelViewProjectionMatrix;
     GLKMatrix3 _normalMatrix;
+    // 旋转角度
     GLfloat _rotation;
     
     GLuint _vertexArray;
@@ -172,6 +166,7 @@ static const SceneVertex vertices[] = {
 
 // 自动调用
 - (void)update {
+    // 视图宽高比
     float aspect = fabs(CGRectGetWidth(self.view.bounds) / CGRectGetHeight(self.view.bounds));
     GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65), aspect, .1, 100);
     
@@ -197,15 +192,23 @@ static const SceneVertex vertices[] = {
     _modelViewProjectionMatrix = GLKMatrix4Multiply(projectionMatrix, modelViewMatrix);
     
     _rotation += self.timeSinceLastUpdate * .5;
+    
+    //NSLog(@"_normalMatrix: %@", NSStringFromGLKMatrix3(_normalMatrix));
+    //NSLog(@"_modelViewProjectionMatrix: %@", NSStringFromGLKMatrix4(_modelViewProjectionMatrix));
+    //NSLog(@"_rotation: %@", @(_rotation));
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
     // 清除帧缓存
     [(AGLKContext *)view.context clear:GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT];
     
+    // 顶点
     [_vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition numberOfCoordinates:3 attribOffset:offsetof(SceneVertex, positionCoords) shouldEnable:YES];
+    // 法线
     [_vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribNormal numberOfCoordinates:3 attribOffset:offsetof(SceneVertex, normalCoords) shouldEnable:YES];
+    // 第一组纹理
     [_vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord0 numberOfCoordinates:2 attribOffset:offsetof(SceneVertex, textureCoords) shouldEnable:YES];
+    // 第二组纹理
     [_vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord1 numberOfCoordinates:2 attribOffset:offsetof(SceneVertex, textureCoords) shouldEnable:YES];
     
     [_baseEffect prepareToDraw];
@@ -221,6 +224,7 @@ static const SceneVertex vertices[] = {
     glUniform1i(uniforms[UNIFORM_TEXTURE0_SAMPLER2D], 0);
     glUniform1i(uniforms[UNIFORM_TEXTURE1_SAMPLER2D], 1);
     
+    // 绘制
     glDrawArrays(GL_TRIANGLES, 0, 36);
 }
 
@@ -288,7 +292,7 @@ static const SceneVertex vertices[] = {
         return NO;
     }
     
-    // 获取统一位置
+    // Get uniform locations.
     uniforms[UNIFORM_MODELIVEWPROJECTION_MATRIX] = glGetUniformLocation(_program, "uModelViewProjectionMatrix");
     uniforms[UNIFORM_NORMAL_MATRIX] = glGetUniformLocation(_program, "uNormalMatrix");
     uniforms[UNIFORM_TEXTURE0_SAMPLER2D] = glGetUniformLocation(_program, "uSampler0");

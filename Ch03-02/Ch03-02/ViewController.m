@@ -55,7 +55,7 @@ static const SceneVertex vertices[] = {
     _vertexBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:sizeof(SceneVertex) numberOfVertices:sizeof(vertices) / sizeof(SceneVertex) bytes:vertices usage:GL_STATIC_DRAW];
     
     // 配置纹理
-    CGImageRef imageRef = [UIImage imageNamed:@"earth.jpg"].CGImage;
+    CGImageRef imageRef = [UIImage imageNamed:@"leaves.gif"].CGImage;
     AGLKTextureInfo *texureInfo = [AGLKTextureLoader textureWithCGImage:imageRef options:nil error:NULL]; // 使用 AGLKTextureLoader 可以获得正确的图片方向
     
     _baseEffect.texture2d0.name = texureInfo.name;

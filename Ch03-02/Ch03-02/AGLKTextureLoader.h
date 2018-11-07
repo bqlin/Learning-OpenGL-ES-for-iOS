@@ -8,8 +8,12 @@
 
 #import <GLKit/GLKit.h>
 
+/**
+ 对纹理缓存的封装
+ */
 @interface AGLKTextureInfo : NSObject
 
+/// 纹理 ID
 @property (nonatomic, assign, readonly) GLuint name;
 @property (nonatomic, assign, readonly) GLenum target;
 @property (nonatomic, assign, readonly) GLuint width;
@@ -17,6 +21,9 @@
 
 @end
 
+/**
+ 加载 OpenGL ES 纹理数据工具类
+ */
 @interface AGLKTextureLoader : NSObject
 
 + (AGLKTextureInfo *)textureWithCGImage:(CGImageRef)cgImage options:(NSDictionary<NSString *,NSNumber *> *)options error:(NSError **)outError;

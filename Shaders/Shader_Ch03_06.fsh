@@ -12,7 +12,7 @@ varying lowp vec2 vTextureCoord0;
 varying lowp vec2 vTextureCoord1;
 
 void main() {
-    // 从纹理单元 0 和 1 中获取采样颜色
+    // 从纹理单元 0 和纹理单元 1 中获取采样颜色
     lowp vec4 color0 = texture2D(uSampler0, vTextureCoord0);
     lowp vec4 color1 = texture2D(uSampler1, vTextureCoord1);
 

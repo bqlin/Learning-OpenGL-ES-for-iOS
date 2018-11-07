@@ -12,17 +12,11 @@
 
 #pragma mark - GLKEffectPropertyTexture 扩展
 
-@interface GLKEffectPropertyTexture (AGLKAdditions)
-
-- (void)aglkSetParameter:(GLenum)parameterID value:(GLint)value;
-
-@end
-
 @implementation GLKEffectPropertyTexture (AGLKAdditions)
 
+/// 配置纹理模式（取样模式、循环模式），更改模式不需要重新初始化
 - (void)aglkSetParameter:(GLenum)parameterID value:(GLint)value {
     glBindTexture(self.target, self.name);
-    
     glTexParameteri(self.target, parameterID, value);
 }
 
@@ -121,9 +115,11 @@ static GLKVector3 movementVectors[3] = {
 
 // 以 `preferredFramesPerSecond` 属性定义的速率自动调用
 - (void)update {
+    // 更新顶点数据和取样模式
     [self updateAnimatedVertexPositions];
     [self updateTextureParameters];
 
+    // 定期用变化了的顶点位置重新初始化顶点数组缓存的内容以产生一个意在突出纹理失真的简单动画
     [_vertexBuffer reinitWithAttribStride:sizeof(SceneVertex) numberOfVertices:sizeof(vertices) / sizeof(SceneVertex) bytes:vertices];
 }
 
