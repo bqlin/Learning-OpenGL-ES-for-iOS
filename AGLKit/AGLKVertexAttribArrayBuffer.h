@@ -31,17 +31,7 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
 @property (nonatomic, assign, readonly) GLsizeiptr stride;
 
 /**
- 绘制
- 内部调用 `glDrawArrays(mode, first, count)`
- 
- @param mode 处理模式
- @param first 缓存中第一顶点的位置
- @param count 顶点数量
- */
-+ (void)drawPreparedArraysWithMode:(GLenum)mode startVertexIndex:(GLint)first numberOfVertices:(GLsizei)count;
-
-/**
- 初始化
+ 初始化 1️⃣2️⃣3️⃣
 
  @param stride 步幅
  @param count 顶点数量
@@ -52,7 +42,7 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
 - (instancetype)initWithAttribStride:(GLsizeiptr)stride numberOfVertices:(GLsizei)count bytes:(const GLvoid *)dataPtr usage:(GLenum)usage;
 
 /**
- 重新加载存储在接收者的数据
+ 重新加载存储在接收者的数据 2️⃣3️⃣
  用途使用 `GL_DYNAMIC_DRAW`
 
  @param stride 步幅
@@ -62,7 +52,7 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
 - (void)reinitWithAttribStride:(GLsizeiptr)stride numberOfVertices:(GLsizei)count  bytes:(const GLvoid *)dataPtr;
 
 /**
- 准备顶点数组到缓冲区
+ 准备顶点数组到缓冲区 2️⃣4️⃣5️⃣
 
  @param index 准备的顶点索引
  @param count 顶点总数
@@ -72,7 +62,7 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
 - (void)prepareToDrawWithAttrib:(GLuint)index numberOfCoordinates:(GLint)count attribOffset:(GLsizeiptr)offset shouldEnable:(BOOL)shouldEnable;
 
 /**
- 绘制
+ 绘制 6️⃣
  内部调用 `glDrawArrays(mode, first, count)`
  
  @param mode 处理模式
@@ -81,6 +71,14 @@ typedef NS_ENUM(NSInteger, AGLKVertexAttrib) {
  */
 - (void)drawArrayWithMode:(GLenum)mode startVertexIndex:(GLint)first numberOfVertices:(GLsizei)count;
 
-
+/**
+ 绘制 6️⃣
+ 内部调用 `glDrawArrays(mode, first, count)`
+ 
+ @param mode 处理模式
+ @param first 缓存中第一顶点的位置
+ @param count 顶点数量
+ */
++ (void)drawPreparedArraysWithMode:(GLenum)mode startVertexIndex:(GLint)first numberOfVertices:(GLsizei)count;
 
 @end

@@ -9,7 +9,7 @@
 #import <GLKit/GLKit.h>
 
 /**
- EAGLContext 子类，仅添加了 `clearColor` 属性，使用 OC 封装了一些 C 风格的接口
+ EAGLContext 子类，仅添加了 `clearColor` 属性，使用 OC 封装了一些 C 接口
  */
 @interface AGLKContext : EAGLContext
 
