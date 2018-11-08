@@ -1,11 +1,12 @@
 //
 //  ViewController.m
-//  Ch05-01
+//  Ch05-03
 //
 //  Created by bqlin on 2018/11/8.
 //  Copyright © 2018年 Bq. All rights reserved.
 //
 
+#import "ViewController.h"
 #import "ViewController.h"
 #import "AGLKVertexAttribArrayBuffer.h"
 #import "AGLKContext.h"
@@ -32,11 +33,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // 确认加载的视图
-    GLKView *view = (GLKView *)self.view;
-    NSAssert([view isKindOfClass:[GLKView class]], @"View controller's view is not a GLKView");
+    AGLKView *view = (AGLKView *)self.view;
+    NSAssert([view isKindOfClass:[AGLKView class]], @"View controller's view is not a AGLKView");
     
     // 配置深度格式
-    view.drawableDepthFormat = GLKViewDrawableDepthFormat16;
+    view.drawableDepthFormat = AGLKViewDrawableDepthFormat16;
     
     // 创建 OpenGL ES 2.0 上下文，并提供给视图
     view.context = [[AGLKContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];

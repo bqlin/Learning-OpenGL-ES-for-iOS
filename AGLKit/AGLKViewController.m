@@ -80,12 +80,20 @@ static const NSInteger kAGLKDefaultFramePerSecond = 30;
 }
 
 - (NSInteger)framesPerSecond {
-    return _displayLink.preferredFramesPerSecond;
+    if (@available(iOS 10.0, *)) {
+        return _displayLink.preferredFramesPerSecond;
+    } else {
+        return _preferredFramesPerSecond;
+    }
 }
 
 - (void)setPreferredFramesPerSecond:(NSInteger)preferredFramesPerSecond {
     _preferredFramesPerSecond = preferredFramesPerSecond;
-    _displayLink.preferredFramesPerSecond = preferredFramesPerSecond;
+    if (@available(iOS 10.0, *)) {
+        _displayLink.preferredFramesPerSecond = preferredFramesPerSecond;
+    } else {
+        _displayLink.frameInterval = MAX(1, (60 / preferredFramesPerSecond));
+    }
 }
 
 - (BOOL)paused {
