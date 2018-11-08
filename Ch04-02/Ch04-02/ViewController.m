@@ -144,5 +144,4 @@ NS_INLINE SceneTriangle SceneTriangleMake(const SceneVertex vertexA, const Scene
     _shouldUseDetailLighting = sender.on;
 }
 
-
 @end
