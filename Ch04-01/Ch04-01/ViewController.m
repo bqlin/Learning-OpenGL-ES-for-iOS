@@ -12,7 +12,7 @@
 
 /// 用于存储顶点信息的数据类型
 typedef struct {
-    GLKVector3 position;
+    GLKVector3 position; // 顶点
     GLKVector3 normal; // 法向量
 } SceneVertex;
 
@@ -54,7 +54,7 @@ static SceneTriangle SceneTriangleMake(const SceneVertex vertexA, const SceneVer
     return result;
 }
 
-/// 返回顶点A和顶点B的叉积方向一致的单位向量
+/// 返回顶点A和顶点B的叉积方向一致的单位向量（AB向量的叉积的单位向量）
 GLKVector3 SceneVector3UnitNormal(const GLKVector3 vectorA, const GLKVector3 vectorB) {
     return GLKVector3Normalize(GLKVector3CrossProduct(vectorA, vectorB));
 }
@@ -67,7 +67,7 @@ static GLKVector3 SceneTrianleFaceNormal(const SceneTriangle triangle) {
     return SceneVector3UnitNormal(vectorA, vectorB);
 }
 
-/// 计算八个三角形的面法线向量，然后使用三角形的顶点的三角形面法线更新每个三角形的每个顶点的法线向量
+/// 计算8个三角形的面法线向量，然后使用三角形的顶点的三角形面法线更新每个三角形的每个顶点的法线向量
 static void SceneTriagnlesUpdateFaceNormals(SceneTriangle someTriangles[NUM_FACES]) {
     for (int i = 0; i < NUM_FACES; i++) {
         GLKVector3 faceNormal = SceneTrianleFaceNormal(someTriangles[i]);
@@ -77,7 +77,7 @@ static void SceneTriagnlesUpdateFaceNormals(SceneTriangle someTriangles[NUM_FACE
     }
 }
 
-/// 计算八个三角形的面法线向量，然后通过平均共享顶点的么个三角形的面法线向量来更新每个顶点的法线向量
+/// 计算8个三角形的面法线向量，然后通过平均共享顶点的每个三角形的面法线向量来更新每个顶点的法线向量
 static void SceneTrianglesUpdateVertexNormals(SceneTriangle someTriangles[NUM_FACES]) {
     SceneVertex newVertexA = vertexA;
     SceneVertex newVertexB = vertexB;
@@ -96,7 +96,7 @@ static void SceneTrianglesUpdateVertexNormals(SceneTriangle someTriangles[NUM_FA
         faceNormals[i] = SceneTrianleFaceNormal(someTriangles[i]);
     }
     
-    // 使用4个相邻顶点的面法线平均么个顶点法线
+    // 使用4个相邻顶点的面法线，计算每个顶点法线的平均值
     newVertexA.normal = faceNormals[0];
     newVertexB.normal =
     GLKVector3MultiplyScalar(
@@ -153,7 +153,7 @@ static void SceneTrianglesUpdateVertexNormals(SceneTriangle someTriangles[NUM_FA
     someTriangles[7] = SceneTriangleMake(newVertexH, newVertexF, newVertexI);
 }
 
-/// 初始化 someNormalLineVertices 中的值，其中顶点标识八个三角形的法线向量的线和表示光线方向的线
+/// 初始化 someNormalLineVertices 中的值，其中顶点标识8个三角形的法线向量的线和表示光线方向的线
 static void SceneTriangleNormalLinesUpdate(const SceneTriangle someTriangles[NUM_FACES], GLKVector3 lightPosition, GLKVector3 someNormalLineVertices[NUM_LINE_VERTS]) {
     int lineVetexIndex = 0;
     // 定义指示每个法向量方向的线
@@ -182,7 +182,10 @@ static void SceneTriangleNormalLinesUpdate(const SceneTriangle someTriangles[NUM
     SceneTriangle _triangles[NUM_FACES];
 }
 
+/// 绘制三角锥
 @property (nonatomic, strong) GLKBaseEffect *baseEffect;
+
+/// 绘制法线
 @property (nonatomic, strong) GLKBaseEffect *extraEffect;
 @property (nonatomic, strong) AGLKVertexAttribArrayBuffer *vertexBuffer;
 @property (nonatomic, strong) AGLKVertexAttribArrayBuffer *extraBuffer;
@@ -228,8 +231,15 @@ static void SceneTriangleNormalLinesUpdate(const SceneTriangle someTriangles[NUM
     // 创建一个基本特效，提供标准的 OpenGL ES 2.0 着色器，并设置常量以用于后续渲染
     _baseEffect = [[GLKBaseEffect alloc] init];
     _baseEffect.light0.enabled = GL_TRUE;
-    _baseEffect.light0.diffuseColor = GLKVector4Make(.7, .7, .7, 1);
-    _baseEffect.light0.position = GLKVector4Make(1, 1, .5, 0);
+    _baseEffect.light0.diffuseColor = GLKVector4Make(.7, .7, .7, 1); // 光照颜色
+    _baseEffect.light0.position = GLKVector4Make(1, 1, .5, 0); // 前三个元素表示光源的位置或设置为一个指向无限远的光源方向；最后一个元素指示前三个元素是位置（0）还是方向
+    
+    // for test: 添加第二束光
+    _baseEffect.light1.enabled = GL_TRUE;
+    _baseEffect.light1.diffuseColor = GLKVector4Make(1, 1, .5, 1);
+    _baseEffect.light1.position = GLKVector4Make(0, 1, .8, .5);
+    _baseEffect.light1.specularColor = GLKVector4Make(0, 0, 1, 1); // 镜面反射颜色
+    _baseEffect.light1.ambientColor = GLKVector4Make(0, 0, .2, .1); // 环境颜色
     
     _extraEffect = [[GLKBaseEffect alloc] init];
     _extraEffect.useConstantColor = GL_TRUE;
@@ -240,7 +250,7 @@ static void SceneTriangleNormalLinesUpdate(const SceneTriangle someTriangles[NUM
         GLKMatrix4 modelViewMatrix = GLKMatrix4MakeRotation(GLKMathDegreesToRadians(-60), 1, 0, 0);
         modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(-30), 0, 0, 1);
         modelViewMatrix = GLKMatrix4Translate(modelViewMatrix, 0, 0, .25);
-        
+
         _baseEffect.transform.modelviewMatrix = _extraEffect.transform.modelviewMatrix = modelViewMatrix;
     }
     
