@@ -12,8 +12,8 @@ uniform highp mat4 u_tex1Matrix;
 
 uniform sampler2D u_unit2d[MAX_TEXURES];
 
-uniform lowp float u_tex0Enable;
-uniform lowp float u_tex1Enable;
+uniform lowp float u_tex0Enabled;
+uniform lowp float u_tex1Enabled;
 
 uniform lowp vec4 u_globalAmbient;
 
@@ -53,7 +53,7 @@ void main() {
 	texCoordVec4 = u_tex0Matrix * texCoordVec4;
 	texCoords = texCoordVec4.st;
 	lowp vec4 texColor0 = texture2D(u_unit2d[0], texCoords);
-	texColor0 = u_tex0Enable * texColor0;
+	texColor0 = u_tex0Enabled * texColor0;
 
 	// 纹理1中的颜色
 	texCoords = v_texCoord[1];
@@ -61,12 +61,12 @@ void main() {
 	texCoordVec4 = u_tex1Matrix * texCoordVec4;
 	texCoords = texCoordVec4.st;
 	lowp vec4 texColor1 = texture2D(u_unit2d[1], texCoords);
-	texColor1 = u_tex1Enable * texColor1;
+	texColor1 = u_tex1Enabled * texColor1;
 
 	// 组合纹理中的颜色
 	lowp vec4 combinedTexColor;
 	combinedTexColor.rgb = (texColor0.rgb * (1.0 - texColor1.a)) + (texColor1.rgb * texColor1.a);
-	combinedTexColor.rgb += (1.0 - max(u_tex0Enable, u_tex1Enable)) * vec3(1, 1, 1);
+	combinedTexColor.rgb += (1.0 - max(u_tex0Enabled, u_tex1Enabled)) * vec3(1, 1, 1);
 	combinedTexColor.a = max(texColor0.a, texColor1.a);
 
 	lowp vec3 renormalizedNormal = normalize(v_normal);
