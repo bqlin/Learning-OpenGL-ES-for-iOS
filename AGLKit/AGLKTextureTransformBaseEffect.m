@@ -276,7 +276,10 @@ enum {
     if (logLength > 0) {
         GLchar *log = (GLchar *)malloc(logLength);
         glGetShaderInfoLog(*shader, logLength, &logLength, log);
-        NSLog(@"Shader compile log:\n%s", log);
+        NSString *typeString = nil;
+        if (type == GL_VERTEX_SHADER) typeString = @"Vertex";
+        else if (type == GL_FRAGMENT_SHADER) typeString = @"Fragment";
+        NSLog(@"%@ Shader compile log:\n%s", typeString, log);
         free(log);
     }
 #endif

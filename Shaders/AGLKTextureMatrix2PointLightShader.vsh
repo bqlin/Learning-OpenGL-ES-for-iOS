@@ -26,14 +26,12 @@ uniform lowp vec4 u_globalAmbient;
 uniform highp vec3 u_light0EyePos;
 uniform lowp vec3 u_light0NormalEyeDirection;
 uniform lowp vec4 u_light0Diffuse;
-uniform lowp vec4 u_light0Ambient;
 uniform highp float u_light0Cutoff;
 uniform highp float u_light0Exponent;
 
 uniform highp vec3 u_light1EyePos;
 uniform lowp vec3 u_light1NormalEyeDirection;
 uniform lowp vec4 u_light1Diffuse;
-uniform lowp vec4 u_light1Ambient;
 uniform highp float u_light1Cutoff;
 uniform highp float u_light1Exponent;
 
@@ -41,16 +39,16 @@ uniform highp vec3 u_light2EyePos;
 uniform lowp vec4 u_light2Diffuse;
 
 // 变量
-varing highp vec2 v_texCoord[MAX_TEX_COORDS];
-varing lowp vec3 v_normal;
+varying highp vec2 v_texCoord[MAX_TEX_COORDS];
+varying lowp vec3 v_normal;
 
-varing lowp vec3 v_vertexToLight0;
-varing lowp vec4 v_diffuseColor0;
+varying lowp vec3 v_vertexToLight0;
+varying lowp vec4 v_diffuseColor0;
 
-varing lowp vec3 v_vertexToLigh1;
-varing lowp vec4 v_diffuseColor1;
+varying lowp vec3 v_vertexToLight1;
+varying lowp vec4 v_diffuseColor1;
 
-varing lowp vec4 v_diffuseColor2;
+varying lowp vec4 v_diffuseColor2;
 
 void main() {
 	// 纹理
@@ -67,7 +65,7 @@ void main() {
 
 	// 光照1
 	eyePos = (u_modelviewMatrix *vec4(a_position, 1)).xyz;
-	v_vertexToLigh1 = normalize(u_light1EyePos - eyePos);
+	v_vertexToLight1 = normalize(u_light1EyePos - eyePos);
 	v_diffuseColor1 = u_light1Diffuse;
 
 	// 光照2(always directional: u_light2EyePos is really a direction)

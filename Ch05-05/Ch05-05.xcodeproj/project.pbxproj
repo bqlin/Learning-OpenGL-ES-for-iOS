@@ -17,9 +17,9 @@
 		FB964EDB219538EB0069AA8E /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FB964ED8219538EB0069AA8E /* AGLKContext.m */; };
 		FB964EDD219567B30069AA8E /* leaves_transparency.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB964EDC219567B30069AA8E /* leaves_transparency.gif */; };
 		FB964EDF219567BF0069AA8E /* beetle.png in Resources */ = {isa = PBXBuildFile; fileRef = FB964EDE219567BE0069AA8E /* beetle.png */; };
-		FB964EE2219567DA0069AA8E /* AGLKTextureMatrix2PointLightShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FB964EE0219567D90069AA8E /* AGLKTextureMatrix2PointLightShader.vsh */; };
-		FB964EE3219567DA0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FB964EE1219567DA0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh */; };
-		FB964EE6219568A00069AA8E /* AGLKTextureTransformBaseEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FB964EE5219568A00069AA8E /* AGLKTextureTransformBaseEffect.m */; };
+		FB964F192195A35A0069AA8E /* AGLKTextureTransformBaseEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FB964F182195A35A0069AA8E /* AGLKTextureTransformBaseEffect.m */; };
+		FB964F1C2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FB964F1A2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.vsh */; };
+		FB964F1D2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FB964F1B2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +39,10 @@
 		FB964ED9219538EB0069AA8E /* AGLKContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLKContext.h; path = ../../AGLKit/AGLKContext.h; sourceTree = "<group>"; };
 		FB964EDC219567B30069AA8E /* leaves_transparency.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leaves_transparency.gif; path = ../../Resources/leaves_transparency.gif; sourceTree = "<group>"; };
 		FB964EDE219567BE0069AA8E /* beetle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beetle.png; path = ../../Resources/beetle.png; sourceTree = "<group>"; };
-		FB964EE0219567D90069AA8E /* AGLKTextureMatrix2PointLightShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = AGLKTextureMatrix2PointLightShader.vsh; path = ../../Shaders/AGLKTextureMatrix2PointLightShader.vsh; sourceTree = "<group>"; };
-		FB964EE1219567DA0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = AGLKTextureMatrix2PointLightShader.fsh; path = ../../Shaders/AGLKTextureMatrix2PointLightShader.fsh; sourceTree = "<group>"; };
-		FB964EE4219568A00069AA8E /* AGLKTextureTransformBaseEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AGLKTextureTransformBaseEffect.h; path = ../../AGLKit/AGLKTextureTransformBaseEffect.h; sourceTree = "<group>"; };
-		FB964EE5219568A00069AA8E /* AGLKTextureTransformBaseEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AGLKTextureTransformBaseEffect.m; path = ../../AGLKit/AGLKTextureTransformBaseEffect.m; sourceTree = "<group>"; };
+		FB964F172195A35A0069AA8E /* AGLKTextureTransformBaseEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLKTextureTransformBaseEffect.h; path = ../../AGLKit/AGLKTextureTransformBaseEffect.h; sourceTree = "<group>"; };
+		FB964F182195A35A0069AA8E /* AGLKTextureTransformBaseEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLKTextureTransformBaseEffect.m; path = ../../AGLKit/AGLKTextureTransformBaseEffect.m; sourceTree = "<group>"; };
+		FB964F1A2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = AGLKTextureMatrix2PointLightShader.vsh; path = ../../Shaders/AGLKTextureMatrix2PointLightShader.vsh; sourceTree = "<group>"; };
+		FB964F1B2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = AGLKTextureMatrix2PointLightShader.fsh; path = ../../Shaders/AGLKTextureMatrix2PointLightShader.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,6 @@
 				FB964ED8219538EB0069AA8E /* AGLKContext.m */,
 				FB964ED6219538EB0069AA8E /* AGLKVertexAttribArrayBuffer.h */,
 				FB964ED7219538EB0069AA8E /* AGLKVertexAttribArrayBuffer.m */,
-				FB964EE4219568A00069AA8E /* AGLKTextureTransformBaseEffect.h */,
-				FB964EE5219568A00069AA8E /* AGLKTextureTransformBaseEffect.m */,
 				FB964EC0219538D40069AA8E /* AppDelegate.h */,
 				FB964EC1219538D40069AA8E /* AppDelegate.m */,
 				FB964EC3219538D40069AA8E /* ViewController.h */,
@@ -92,8 +90,10 @@
 				FB964ECF219538D60069AA8E /* main.m */,
 				FB964EDE219567BE0069AA8E /* beetle.png */,
 				FB964EDC219567B30069AA8E /* leaves_transparency.gif */,
-				FB964EE1219567DA0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh */,
-				FB964EE0219567D90069AA8E /* AGLKTextureMatrix2PointLightShader.vsh */,
+				FB964F1B2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh */,
+				FB964F1A2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.vsh */,
+				FB964F172195A35A0069AA8E /* AGLKTextureTransformBaseEffect.h */,
+				FB964F182195A35A0069AA8E /* AGLKTextureTransformBaseEffect.m */,
 			);
 			path = "Ch05-05";
 			sourceTree = "<group>";
@@ -156,11 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB964EDD219567B30069AA8E /* leaves_transparency.gif in Resources */,
-				FB964EE2219567DA0069AA8E /* AGLKTextureMatrix2PointLightShader.vsh in Resources */,
+				FB964F1C2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.vsh in Resources */,
 				FB964ECD219538D60069AA8E /* LaunchScreen.storyboard in Resources */,
 				FB964ECA219538D60069AA8E /* Assets.xcassets in Resources */,
 				FB964EC8219538D40069AA8E /* Main.storyboard in Resources */,
-				FB964EE3219567DA0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh in Resources */,
+				FB964F1D2195A39D0069AA8E /* AGLKTextureMatrix2PointLightShader.fsh in Resources */,
 				FB964EDF219567BF0069AA8E /* beetle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,7 +176,7 @@
 				FB964EDA219538EB0069AA8E /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				FB964EC5219538D40069AA8E /* ViewController.m in Sources */,
 				FB964ED0219538D60069AA8E /* main.m in Sources */,
-				FB964EE6219568A00069AA8E /* AGLKTextureTransformBaseEffect.m in Sources */,
+				FB964F192195A35A0069AA8E /* AGLKTextureTransformBaseEffect.m in Sources */,
 				FB964EC2219538D40069AA8E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

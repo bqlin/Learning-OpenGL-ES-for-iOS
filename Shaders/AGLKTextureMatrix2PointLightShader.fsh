@@ -37,11 +37,13 @@ uniform lowp vec4 u_light2Diffuse;
 // 变量
 varying highp vec2 v_texCoord[MAX_TEX_COORDS];
 varying lowp vec3 v_normal;
+
 varying lowp vec3 v_vertexToLight0;
 varying lowp vec4 v_diffuseColor0;
 
 varying lowp vec3 v_vertexToLight1;
 varying lowp vec4 v_diffuseColor1;
+
 varying lowp vec4 v_diffuseColor2;
 
 void main() {
@@ -49,7 +51,7 @@ void main() {
 	lowp vec2 texCoords = v_texCoord[0];
 	lowp vec4 texCoordVec4 = vec4(texCoords.s, texCoords.t, 0, 1);
 	texCoordVec4 = u_tex0Matrix * texCoordVec4;
-	texCoordVec4 = texCoordVec4.st;
+	texCoords = texCoordVec4.st;
 	lowp vec4 texColor0 = texture2D(u_unit2d[0], texCoords);
 	texColor0 = u_tex0Enable * texColor0;
 
@@ -74,7 +76,7 @@ void main() {
 	lowp vec3 vertexDir = -v_vertexToLight0;
 	lowp float cosCutoff = cos(u_light0Cutoff);
 	lowp float vertexDirDotSpotDir = max(dot(vertexDir, u_light0NormalEyeDirection), .0);
-	highp float spotFactor = 0;
+	highp float spotFactor = .0;
 
 	if (vertexDirDotSpotDir >= cosCutoff) {
 		spotFactor = pow(vertexDirDotSpotDir, u_light0Exponent);
