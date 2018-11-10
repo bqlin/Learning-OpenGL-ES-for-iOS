@@ -60,7 +60,7 @@ static const GLfloat kSceneMoonDistanceFromEarth = 3;
     // 配置合理的初始投影矩阵
     _baseEffect.transform.projectionMatrix =
     GLKMatrix4MakeOrtho(-1.0 * 4 / 3,
-                        -1.0 * 4 / 3,
+                        1.0 * 4 / 3,
                         -1, 1, 1, 120);
     // 把地球放置到观察中心点附近
     _baseEffect.transform.modelviewMatrix = GLKMatrix4MakeTranslation(0, 0, -5);
@@ -91,7 +91,7 @@ static const GLfloat kSceneMoonDistanceFromEarth = 3;
     // 初始化轨道中月球的位置
     _moonRotationAngleDegrees = -20;
     
-//    [(AGLKContext *)view.context enable:GL_DEPTH_TEST];
+    [(AGLKContext *)view.context enable:GL_DEPTH_TEST];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -114,10 +114,11 @@ static const GLfloat kSceneMoonDistanceFromEarth = 3;
     [self drawEarth];
     [self drawMoon];
     
-    [(AGLKContext *)view.context enable:GL_DEPTH_TEST];
+    //[(AGLKContext *)view.context enable:GL_DEPTH_TEST];
 }
 
 - (void)logError:(NSError *)error {
+    if (!error) return;
     NSLog(@"error: %@", error);
     error = nil;
 }
@@ -183,6 +184,15 @@ static const GLfloat kSceneMoonDistanceFromEarth = 3;
 #pragma mark - action
 
 - (IBAction)usePerspectiveAction:(UISwitch *)sender {
+    GLKView *view = (GLKView *)self.view;
+    const GLfloat aspectRatio = 1.0 * view.drawableWidth / view.drawableHeight;
+    if (sender.on) {
+        _baseEffect.transform.projectionMatrix = GLKMatrix4MakeFrustum(-1 * aspectRatio, aspectRatio, -1, 1,
+                                                                       1, 120);
+    } else {
+        _baseEffect.transform.projectionMatrix = GLKMatrix4MakeOrtho(-1 * aspectRatio, aspectRatio, -1, 1,
+                                                                     1, 120);
+    }
 }
 
 @end
