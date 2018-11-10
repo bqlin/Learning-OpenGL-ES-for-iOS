@@ -187,9 +187,11 @@ static const GLfloat kSceneMoonDistanceFromEarth = 3;
     GLKView *view = (GLKView *)self.view;
     const GLfloat aspectRatio = 1.0 * view.drawableWidth / view.drawableHeight;
     if (sender.on) {
+        // 设置透视投影变换
         _baseEffect.transform.projectionMatrix = GLKMatrix4MakeFrustum(-1 * aspectRatio, aspectRatio, -1, 1,
                                                                        1, 120);
     } else {
+        // 设置正视投影变换
         _baseEffect.transform.projectionMatrix = GLKMatrix4MakeOrtho(-1 * aspectRatio, aspectRatio, -1, 1,
                                                                      1, 120);
     }
